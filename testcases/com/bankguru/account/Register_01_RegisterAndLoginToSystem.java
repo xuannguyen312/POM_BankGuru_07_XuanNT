@@ -15,7 +15,7 @@ import org.testng.annotations.AfterClass;
 public class Register_01_RegisterAndLoginToSystem {
 	WebDriver driver;
 	private String email, userID, password, loginUrl;
-	
+	//Build FrameWork
 	
 	@BeforeClass
 	public void beforeClass() {
