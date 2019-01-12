@@ -16,6 +16,7 @@ public class Register_01_RegisterAndLoginToSystem {
 	WebDriver driver;
 	private String email, userID, password, loginUrl;
 	
+	
 	@BeforeClass
 	public void beforeClass() {
 		driver = new FirefoxDriver();
