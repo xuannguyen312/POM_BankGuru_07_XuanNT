@@ -1,6 +1,9 @@
 package com.bankguru.account;
 
 import org.testng.annotations.Test;
+
+import commons.AbstractPage;
+
 import org.testng.annotations.BeforeClass;
 
 import java.util.Random;
@@ -12,7 +15,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 
-public class Register_01_RegisterAndLoginToSystem {
+public class RegisterAndLogin_Level_02_Abstract_Page_Ke_Thua_Cach_1 extends AbstractPage {
 	WebDriver driver;
 	private String email, userID, password, loginUrl;
 	//Build FrameWork
@@ -29,9 +32,21 @@ public class Register_01_RegisterAndLoginToSystem {
 
 	@Test
 	public void TC_01_Register() {
+		//Apply Abstract Page
+		openUrl(driver, "http://demo.guru99.com/v4/");
+		// Step-By-Step (Selenium)
 		driver.get("http://demo.guru99.com/v4/");
+		
+		//Apply Abstract Page
+		loginUrl = getCurrentUrl(driver);
+		// Step-By-Step (Selenium)
 		loginUrl = driver.getCurrentUrl();
+		
+		//Apply Abstract Page
+		clickToElement(driver,"//a[text()='here']");
+		// Step-By-Step (Selenium)
 		driver.findElement(By.xpath("//a[text()='here']")).click();
+		
 		Assert.assertTrue(driver.findElement(By.xpath("//h2[contains(.,'Enter your email address to get')]")).isDisplayed());
 		
 		driver.findElement(By.xpath("//input[@name='emailid']")).sendKeys(email);

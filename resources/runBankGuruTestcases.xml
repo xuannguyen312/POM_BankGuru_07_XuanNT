@@ -2,8 +2,23 @@
 <suite name="Bankguru" parallel="false">
 
   <test name="Run on FireFox">
+  <parameter name="browser" value="firefox" />
     <classes>
-      <class name="com.bankguru.account.Register_01_RegisterAndLoginToSystem"/>
+      <class name="com.bankguru.account.RegisterAndLogin_Level_02_Abstract_Page_Ke_Thua_Cach_2"/>
+    </classes>
+  </test> 
+  
+  <test name="Run on Chrome">
+  <parameter name="browser" value="chrome" />
+    <classes>
+      <class name="com.bankguru.account.RegisterAndLogin_Level_02_Abstract_Page_Ke_Thua_Cach_2"/>
+    </classes>
+  </test> 
+  
+   <test name="Run on ChromeHeadLess">
+  <parameter name="browser" value="chromeheadless" />
+    <classes>
+      <class name="com.bankguru.account.RegisterAndLogin_Level_02_Abstract_Page_Ke_Thua_Cach_2"/>
     </classes>
   </test> 
   
