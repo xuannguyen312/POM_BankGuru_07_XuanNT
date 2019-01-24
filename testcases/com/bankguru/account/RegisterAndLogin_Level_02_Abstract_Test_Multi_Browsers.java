@@ -20,7 +20,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 
-public class RegisterAndLogin_Level_02_Abstract_Page_Ke_Thua_Cach_3 extends AbstractTest{
+public class RegisterAndLogin_Level_02_Abstract_Test_Multi_Browsers extends AbstractTest{
 	private WebDriver driver;
 	
 	//Khai Báo AbstractPage
