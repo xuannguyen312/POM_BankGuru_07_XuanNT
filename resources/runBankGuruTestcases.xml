@@ -4,22 +4,9 @@
   <test name="Run on FireFox">
   <parameter name="browser" value="firefox" />
     <classes>
-      <class name="com.bankguru.account.RegisterAndLogin_Level_02_Abstract_Page_Ke_Thua_Cach_3"/>
+      <class name="com.bankguru.account.RegisterAndLogin_Level_03_Apply_Page_Object_Buoi_19"/>
     </classes>
   </test> 
   
-  <test name="Run on Chrome">
-  <parameter name="browser" value="chrome" />
-    <classes>
-      <class name="com.bankguru.account.RegisterAndLogin_Level_02_Abstract_Page_Ke_Thua_Cach_3"/>
-    </classes>
-  </test> 
-  
-   <test name="Run on ChromeHeadLess">
-  <parameter name="browser" value="chromeheadless" />
-    <classes>
-      <class name="com.bankguru.account.RegisterAndLogin_Level_02_Abstract_Page_Ke_Thua_Cach_3"/>
-    </classes>
-  </test> 
   
 </suite> 

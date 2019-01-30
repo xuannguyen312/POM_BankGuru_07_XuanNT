@@ -33,6 +33,7 @@ public class AbstractTest {
 	    	driver = new ChromeDriver(options);
 		}
 		
+		driver.get(Constants.DEV_URL);
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		return driver;

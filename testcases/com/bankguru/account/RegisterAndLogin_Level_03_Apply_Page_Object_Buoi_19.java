@@ -3,6 +3,9 @@ package com.bankguru.account;
 import org.testng.annotations.Test;
 
 import commons.AbstractTest;
+import pageObjects.HomePageObject;
+import pageObjects.LoginPageObject;
+import pageObjects.RegisterPageObject;
 
 import org.testng.annotations.Parameters;
 import org.testng.annotations.BeforeClass;
@@ -23,24 +26,55 @@ public class RegisterAndLogin_Level_03_Apply_Page_Object_Buoi_19 extends Abstrac
 	WebDriver driver;
 	
 	private String email, userID, password, loginUrl;
+	private LoginPageObject loginPage;
+	private RegisterPageObject registerPage;
+	private HomePageObject homePage;
 	
 	@Parameters("browser")
 	@BeforeClass
 	public void beforeClass(String browserName) {
 		driver = openMultiBrowser(browserName);
 		email = "seleniumOnline" + randomNumber() + "@gmail.com";
+	
+		// Mở URL lên thì vào trang LoginPage
+		loginPage = new LoginPageObject(driver);
+		
 		
 	}
 
 
 	@Test
-	public void TC_01_Register() {
+	public void Account_01_RegisterToSystem() {
+		loginUrl = loginPage.getLoginPageURL();
+		
+		loginPage.clickToHereLink();
+		
+		
+		//Click Here Link thì vào RegisterPage
+		registerPage = new RegisterPageObject(driver);
+		
+		registerPage.inputToEmailIDTextBox(email);
+		registerPage.clickToSubmitButton();
+		userID = registerPage.getUserIDText();
+		password = registerPage.getPasswordText();
+		
 		
 	}
 		
 	@Test
-	public void TC_02_LoginwithAboveInformation() {
-		 
+	public void Account_02_LoginwithAboveInformation() {
+		registerPage.openLoginPage(loginUrl);
+		
+		loginPage = new LoginPageObject(driver);
+		
+		loginPage.inputToUserIDTextBox(userID);
+		loginPage.inputToPasswordTextBox(password);
+		loginPage.clickToLoginButton();
+		
+		//Bấm Login thì chuyển đến trang Home
+		homePage = new HomePageObject(driver);
+		
+		Assert.assertTrue(homePage.isHomePageDisplayed()); 
 	}
 	
 	
