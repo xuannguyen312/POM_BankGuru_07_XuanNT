@@ -36,7 +36,17 @@ public class RegisterPageObject extends AbstractPage {
 	
 	public LoginPageObject openLoginPage(String loginPageUrl) {
 		openUrl(driver, loginPageUrl);
+		// Cách 2: Thay vì phải khởi tạo biến ở mỗi hàm thì ta gom các khởi tạo này
+		// vào trong class PageFactoryManager để dễ quản lý, rồi từ đó khi muốn dùng hàm khởi tạo nào
+		// thì ta return về hàm khởi tạo đó trong class PageFactoryManager
+		
 		return PageFactoryManager.getLoginPage(driver);
+		
+		//Cách 1: return new LoginPageObject(driver);
+		/*  Ở hàm openLoginPage() ta return về class LoginPageObject ở Package PageObject
+		*  bởi vì điều này tương ứng với hành động khi user open lại link http://demo.guru99.com/v4/  
+		*  ở trang Register thì sẽ navigate đến trang Login. Hành động "return" cũng đồng nghĩa 
+		*  với việc ta đã khởi tạo biến loginPage ở Source folder "testcases".*/
 	}
 
 }

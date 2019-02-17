@@ -18,4 +18,20 @@ public class PageFactoryManager {
 	{
 		return new HomePageObject(driver);
 	}
+	
+	public static NewCustomerPageObject getNewCustomerPage(WebDriver driver)
+	{
+		return new NewCustomerPageObject (driver);
+	}
+	
+	public static NewAccountPageObject getNewAccountPage(WebDriver driver)
+	{
+		return new NewAccountPageObject(driver);
+	}
+	
+	public static DepositPageObject getDepositPage(WebDriver driver)
+	{
+		return new DepositPageObject(driver);
+	}
+	
 }

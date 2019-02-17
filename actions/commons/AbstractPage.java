@@ -10,6 +10,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import pageObjects.DepositPageObject;
+import pageObjects.NewAccountPageObject;
+import pageObjects.NewCustomerPageObject;
+import pageObjects.PageFactoryManager;
+import pageUIs.AbstractPageUI;
+import pageUIs.HomePageUI;
+import pageUIs.NewAccountPageUI;
+import pageUIs.NewCustomerPageUI;
+
 public class AbstractPage {
 	
 	/*WEB BROWSER*/
@@ -104,5 +113,23 @@ public class AbstractPage {
 		By byLocator = By.xpath(locator);
 		WebDriverWait waitExplicit = new WebDriverWait(driver, 30);
 		waitExplicit.until(ExpectedConditions.visibilityOfElementLocated(byLocator));
+	}
+	
+	public NewAccountPageObject openNewAccountPage(WebDriver driver) {
+		waitToElementVisible(driver,AbstractPageUI.NEW_ACCOUNT_LINK);
+		clickToElement(driver,AbstractPageUI.NEW_ACCOUNT_LINK);
+		return PageFactoryManager.getNewAccountPage(driver);
+	}
+	
+	public NewCustomerPageObject openNewCustomerPage(WebDriver driver) {
+		waitToElementVisible(driver,AbstractPageUI.NEW_CUSTOMER_LINK);
+		clickToElement(driver,AbstractPageUI.NEW_CUSTOMER_LINK);
+		return PageFactoryManager.getNewCustomerPage(driver);
+	}
+	
+	public DepositPageObject openDepositPage(WebDriver driver) {
+		waitToElementVisible(driver, AbstractPageUI.DEPOSIT_LINK);
+		clickToElement(driver,AbstractPageUI.DEPOSIT_LINK);
+		return PageFactoryManager.getDepositPage(driver);
 	}
 }
