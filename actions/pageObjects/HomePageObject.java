@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 
 import commons.AbstractPage;
 import pageUIs.HomePageUI;
+import pageUIs.NewCustomerPageUI;
 
 public class HomePageObject extends AbstractPage{
 	WebDriver driver;
@@ -23,5 +24,13 @@ public class HomePageObject extends AbstractPage{
 		clickToElement(driver,HomePageUI.NEW_CUSTOMER_LINK);
 		return PageFactoryManager.getNewCustomerPage(driver);
 	}*/
+	
+	public boolean isNewCustomerPageUnDisplayed() {
+		waitToElementInVisible(driver, NewCustomerPageUI.NEW_CUSTOMER_TEXT);
+		return isControlUndisplayed(driver, NewCustomerPageUI.NEW_CUSTOMER_TEXT);
+	}
+	
+	
+	
 		
 }

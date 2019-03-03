@@ -25,4 +25,14 @@ public class NewCustomerPageObject extends AbstractPage{
 		return PageFactoryManager.getNewAccountPage(driver);
 	}*/
 		
+	public boolean isHomePageUnDisplayed() {
+		waitToElementInVisible(driver, HomePageUI.HOME_PAGE_WELCOME_MESSAGE);
+		return isControlUndisplayed(driver, HomePageUI.HOME_PAGE_WELCOME_MESSAGE);
+	}
+	
+	public boolean isAddCustomerPageUnDisplayed() {
+		waitToElementInVisible(driver, NewCustomerPageUI.CUSTOMER_FORM);
+		return isControlUndisplayed(driver, NewCustomerPageUI.CUSTOMER_FORM);
+	}
+	
 }

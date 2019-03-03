@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
 encoding//actions/commons/AbstractPage.java=UTF-8
+encoding//actions/commons/AbstractTest.java=UTF-8
 encoding//actions/pageObjects/LoginPageObject.java=UTF-8
 encoding//actions/pageObjects/RegisterPageObject.java=UTF-8
 encoding//interfaces/pageUIs/AbstractPageUI.java=UTF-8
@@ -12,3 +13,5 @@ encoding//testcases/com/bankguru/account/RegisterAndLogin_Level_03_Apply_Page_Ob
 encoding//testcases/com/bankguru/account/RegisterAndLogin_Level_04_PageFactoryManagement_Buoi_20.java=UTF-8
 encoding//testcases/com/bankguru/account/RegisterAndLogin_Level_05_Web_Driver_Life_Cycle.java=UTF-8
 encoding//testcases/com/bankguru/account/RegisterAndLogin_Level_06_DynamicLocator_And_RestParameter.java=UTF-8
+encoding//testcases/com/bankguru/account/RegisterAndLogin_Level_07_Check_Element_Undisplayed.java=UTF-8
+encoding//testcases/com/bankguru/account/RegisterAndLogin_Level_08_Assert_Verify_Log_Report.java=UTF-8

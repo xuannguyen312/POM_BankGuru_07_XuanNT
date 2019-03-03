@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Bankguru" parallel="false">
+<suite name="Bankguru" parallel="false" thread-count="3">
 
   <test name="Run on FireFox">
   <parameter name="browser" value="firefox" />
     <classes>
-      <class name="com.bankguru.account.RegisterAndLogin_Level_06_DynamicLocator_And_RestParameter"/>
+      <class name="com.bankguru.account.RegisterAndLogin_Level_08_Assert_Verify_Log_Report"/>
     </classes>
   </test> 
   
